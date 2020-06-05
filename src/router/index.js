@@ -5,6 +5,10 @@ import login from "../views/login.vue"
 import register from "../views/register.vue"
 import setPwd from "../views/setPwd.vue"
 import personalCenter from "../views/personalCenter.vue"
+import infoPage from "../views/InfoPage.vue"
+import quickQN from "../views/infoPage/quickQN.vue"
+import helpCenter from "../views/infoPage/helpCenter.vue"
+import introduce from '../views/infoPage/introduce.vue'
 
 Vue.use(VueRouter)
 
@@ -23,7 +27,7 @@ const routes = [{
 		name: 'register',
 		component: register
 	},
-	
+
 	{
 		path: '/setPwd',
 		name: 'setPwd',
@@ -33,6 +37,26 @@ const routes = [{
 		path: '/personalCenter',
 		name: 'personalCenter',
 		component: personalCenter
+	},
+	{
+		path: '/infoPage',
+		name: 'infoPage',
+		component: infoPage,
+		children: [{
+				path: '/infoPage/quickQN',
+				name: 'quickQN',
+				component: quickQN
+			}, {
+				path: '/infoPage/helpCenter',
+				name: 'helpCenter',
+				component: helpCenter
+			}, {
+				path: '/infoPage/introduce',
+				name: 'introduce',
+				component: introduce
+			},
+
+		]
 	}
 ]
 

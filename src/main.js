@@ -7,6 +7,11 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 //引入公共样式
 import "./assets/css/reset.css"
 import "./assets/css/all.css"
+import 'ant-design-vue/dist/antd.css';
+
+import Antd from 'ant-design-vue'
+Vue.use(Antd)
+
 
 //引入轮播图swiper样式
 import 'swiper/css/swiper.css'
