@@ -86,6 +86,10 @@ export default {
 
   mounted() {
     console.log(this.$route.path);
+    const that = this
+    that.helpNavList.forEach(item=>{
+      
+    })
   },
 
   methods: {
